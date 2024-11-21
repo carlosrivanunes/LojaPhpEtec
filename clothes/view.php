@@ -5,7 +5,7 @@ view($_GET['id']);
 
 <?php include(HEADER_TEMPLATE); ?>
 
-<h2 class="ms-3 mt-2">Roupa <?php echo $cloth['id']; ?></h2>
+<h2 class="ms-3 mt-2">Produto <?php echo $cloth['id']; ?></h2>
 <hr>
 
 <?php if (!empty($_SESSION['message'])): ?>
@@ -25,14 +25,14 @@ view($_GET['id']);
         </div>
 
         <div class="form-group col-md-2">
-            <label for="tamanho">Tamanho</label>
+            <label for="tamanho">Em Estoque/Lojas</label>
             <input type="text" class="form-control" id="tamanho" value="<?php echo $cloth['tamanho']; ?>" readonly>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-md-5">
-            <label for="quantidade">Quantidade em Estoque</label>
+            <label for="quantidade">Em Estoque/Armazém</label>
             <input type="text" class="form-control" id="quantidade" value="<?php echo $cloth['quantidade']; ?>" readonly>
         </div>
 

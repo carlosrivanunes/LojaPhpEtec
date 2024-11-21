@@ -145,16 +145,19 @@ function edit()
 					//Upload da foto
 					$pasta_destino = "fotos/";
 					$arquivo_destino = $pasta_destino . basename($_FILES['foto']['name']);
-					$tipo_arquivo = strtolower(pathinfo($arquivo_destino, PATHINFO_EXTENSION));
-					$nomearquivo = uniqid() . "." . $tipo_arquivo; 
+					$nomearquivo = basename($_FILES['foto']['name']);
+					$resolução_arquivo = getimagesize($_FILES['foto']['tmp_name']);
 					$tamanho_arquivo = $_FILES['foto']['size'];
 					$nome_temp = $_FILES['foto']['tmp_name'];
+					$tipo_arquivo = strtolower(pathinfo($arquivo_destino, PATHINFO_EXTENSION));
 
 					upload($pasta_destino, $arquivo_destino, $tipo_arquivo, $nome_temp, $tamanho_arquivo);
+
+					$usuario['foto'] = $nomearquivo;
 				}
 
 				update('usuarios', $id, $usuario);
-				//header('Location: index.php');
+				header('Location: index.php');
 			} else {
 				global $usuario;
 				$usuario = find("usuarios", $id);
@@ -167,7 +170,6 @@ function edit()
 		$_SESSION['type'] = "danger";
 	}
 }
-
 /**
  * Visualização de um Usuário 
  */

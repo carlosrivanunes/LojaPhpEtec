@@ -40,10 +40,11 @@
     </style>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-xxl navbar-dark bg-dark fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="<?php echo BASEURL; ?>">
-            <i class="fa-solid fa-house-chimney"></i> CRUD PW
+            <i class="fa-solid fa-house-chimney"></i> CRUD
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -61,11 +62,11 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-boxes-stacked"></i> Roupas
+                        <i class="fa-solid fa-boxes-stacked"></i> Produtos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="<?php echo BASEURL; ?>clothes/add.php"><i class="fa-solid fa-box"></i> Adicionar Roupa</a></li>
-                        <li><a class="dropdown-item" href="<?php echo BASEURL; ?>clothes/"><i class="fa-solid fa-boxes-stacked"></i> Gerenciar Roupas</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASEURL; ?>clothes/add.php"><i class="fa-solid fa-box"></i> Adicionar Produto</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASEURL; ?>clothes/"><i class="fa-solid fa-boxes-stacked"></i> Gerenciar Produtos</a></li>
                     </ul>
                 </li>
                 <?php if (isset($_SESSION['user'])): // Verifica se está logado ?>
@@ -98,3 +99,4 @@
     </div>
 </nav>
 <main class="container">
+    

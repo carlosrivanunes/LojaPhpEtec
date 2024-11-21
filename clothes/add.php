@@ -5,7 +5,7 @@
 
 <?php include(HEADER_TEMPLATE); ?>
 
-<h2 class="mt-3 ms-3">Nova Roupa</h2>
+<h2 class="mt-3 ms-3">Novos Produtos</h2>
 
 <form action="add.php" method="post" enctype="multipart/form-data" class="ms-3 me-3">
     
@@ -22,14 +22,14 @@
         </div>
 
         <div class="form-group col-md-2">
-            <label for="campo3">Tamanho</label>
+            <label for="campo3">Em Estoque/Lojas</label>
             <input type="number" class="form-control" name="clothes['tamanho']" required>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-md-5">
-            <label for="campo1">Em Estoque</label>
+            <label for="campo1">Em Estoque/Armazém</label>
             <input type="number" class="form-control" name="clothes['quantidade']" >
         </div>
 

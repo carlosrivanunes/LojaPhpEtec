@@ -5,7 +5,7 @@
 
 <?php include(HEADER_TEMPLATE); ?>
 
-<h2 class="ms-3 mt-3">Atualizar Roupa</h2>
+<h2 class="ms-3 mt-3">Atualizar Produtos</h2>
 
 <form action="edit.php?id=<?php echo isset($cloth['id']) ? $cloth['id'] : ''; ?>" method="post" enctype="multipart/form-data" class="ms-3 me-3">
     <hr />
@@ -21,13 +21,13 @@
         </div>
 
         <div class="form-group col-md-2">
-            <label for="tamanho">Tamanho</label>
+            <label for="tamanho">Em Estoque/Lojas</label>
             <input type="text" class="form-control" name="clothes[tamanho]" value="<?php echo isset($cloth['tamanho']) ? $cloth['tamanho'] : ''; ?>" required>
         </div>
     </div>
     <div class="row">
         <div class="form-group col-md-5">
-            <label for="quantidade">Quantidade em Estoque</label>
+            <label for="quantidade">Em Estoque/Armazém</label>
             <input type="number" class="form-control" name="clothes[quantidade]" value="<?php echo isset($cloth['quantidade']) ? $cloth['quantidade'] : ''; ?>" required>
         </div>
 

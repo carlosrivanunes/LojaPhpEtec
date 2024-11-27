@@ -121,7 +121,8 @@
             $_SESSION['message'] = 'Registro atualizado com sucesso.';
             $_SESSION['type'] = 'success';
         } catch (Exception $e) {
-            $_SESSION['message'] = 'Não foi possível realizar a operação.';
+
+            $_SESSION['message'] = 'Não foi possível realizar a operação.' . $e->getMessage();
             $_SESSION['type'] = 'danger';
             error_log("Exception: " . $e->getMessage());
         } finally {

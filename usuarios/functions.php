@@ -151,13 +151,17 @@ function edit()
 					$nome_temp = $_FILES['foto']['tmp_name'];
 					$tipo_arquivo = strtolower(pathinfo($arquivo_destino, PATHINFO_EXTENSION));
 
+					/*
+					$arr = get_defined_vars();
+					var_dump($arr);	
+					*/
 					upload($pasta_destino, $arquivo_destino, $tipo_arquivo, $nome_temp, $tamanho_arquivo);
 
 					$usuario['foto'] = $nomearquivo;
 				}
 
 				update('usuarios', $id, $usuario);
-				header('Location: index.php');
+				//header('Location: index.php');
 			} else {
 				global $usuario;
 				$usuario = find("usuarios", $id);

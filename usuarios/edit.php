@@ -45,7 +45,7 @@ include(HEADER_TEMPLATE);
             <label for="senha">
                 <h6>Senha</h6>
             </label>
-            <input type="password" class="form-control" name="usuario[password]" value="">
+            <input type="password" class="form-control" name="usuario[pass]" value="">
         </div>
     </div>
 

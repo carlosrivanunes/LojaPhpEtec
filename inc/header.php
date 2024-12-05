@@ -56,7 +56,9 @@
                         <i class="fa-solid fa-users"></i> Clientes
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <?php if (isset($_SESSION['user'])) { ?> 
                         <li><a class="dropdown-item" href="<?php echo BASEURL; ?>customers/add.php"><i class="fa-solid fa-user-plus"></i> Adicionar</a></li>
+                        <?php } ?> 
                         <li><a class="dropdown-item" href="<?php echo BASEURL; ?>customers/"><i class="fa-solid fa-users"></i> Gerenciar Clientes</a></li>
                     </ul>
                 </li>
@@ -65,7 +67,9 @@
                         <i class="fa-solid fa-boxes-stacked"></i> Produtos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <?php if (isset($_SESSION['user'])) { ?> 
                         <li><a class="dropdown-item" href="<?php echo BASEURL; ?>clothes/add.php"><i class="fa-solid fa-box"></i> Adicionar Produto</a></li>
+                        <?php } ?> 
                         <li><a class="dropdown-item" href="<?php echo BASEURL; ?>clothes/"><i class="fa-solid fa-boxes-stacked"></i> Gerenciar Produtos</a></li>
                     </ul>
                 </li>

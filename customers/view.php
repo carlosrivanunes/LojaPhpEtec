@@ -83,7 +83,9 @@
 
     <div id="actions" class="row mt-2">
         <div class="col-md-12">
+            <?php if (isset($_SESSION['user'])) { ?> 
             <a href="edit.php?id=<?php echo $customer['id']; ?>" class="btn btn-primary">Editar</a>
+            <?php } ?> 
             <a href="index.php" class="btn btn-default">Voltar</a>
         </div>
     </div>

@@ -39,9 +39,10 @@
 
         <div class="form-group col-md-2">
             <label for="created">Data de Cadastro</label>
-            <input type="text" class="form-control" name="cloth[created]" disabled value="<?php echo isset($cloth['created']) ? $cloth['created'] : ''; ?>">
+            <input type="text" class="form-control" name="cloth[created]" disabled value="<?php echo isset($cloth['created']) ? FormataData2($cloth['created'], "Y-m-d"): ''; ?>">
         </div>
     </div>
+    
 
     <div id="actions" class="row mt-3">
         <div class="col-md-12">

@@ -11,6 +11,7 @@
     <?php if ($db): ?>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
 
+            <?php if (isset($_SESSION['user'])) { ?>
             <!-- Novo Cliente -->
             <div class="col">
                 <a href="customers/add.php" class="card text-center shadow-sm border-primary">
@@ -20,7 +21,7 @@
                     </div>
                 </a>
             </div>
-
+            <?php } ?>    
             <!-- Clientes -->
             <div class="col">
                 <a href="customers" class="card text-center shadow-sm border-success">
@@ -31,6 +32,7 @@
                 </a>
             </div>
 
+            <?php if (isset($_SESSION['user'])) { ?>    
             <!-- Nova Roupa -->
             <div class="col">
                 <a href="clothes/add.php" class="card text-center shadow-sm border-warning">
@@ -40,13 +42,13 @@
                     </div>
                 </a>
             </div>
-
+            <?php } ?>  
             <!-- Roupas -->
             <div class="col">
                 <a href="clothes" class="card text-center shadow-sm border-danger">
                     <div class="card-body">
                     <i class="fa-solid fa-box fa-3x mb-3 text-danger"></i>
-                        <h5 class="card-title">produtos</h5>
+                        <h5 class="card-title">Produtos</h5>
                     </div>
                 </a>
             </div>

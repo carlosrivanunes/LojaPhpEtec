@@ -171,6 +171,11 @@
         return $dt->format($formato);
     }
 
+    function FormataData2 ( $data, $formato) {
+        $dt = new DateTime($data);
+        return $dt->format($formato);
+    }
+
     function telefone ($telefone) {
         $tel = "(" . substr($telefone, 0, 2) . ")" . " " . substr($telefone, 2, 5) . "-" . substr($telefone, 7, 4);
         return $tel;

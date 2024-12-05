@@ -44,12 +44,14 @@
                             <td class="actions text-right">
                                 <a href="view.php?id=<?php echo $cloth['id']; ?>" class="btn btn-sm btn-success"><i
                                         class="fa fa-eye"></i> Visualizar</a>
+                                <?php if (isset($_SESSION['user'])) { ?> 
                                 <a href="edit.php?id=<?php echo $cloth['id']; ?>" class="btn btn-sm btn-warning"><i
                                         class="fa fa-pencil"></i> Editar</a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#delete-modal"
                                     data-cloth="<?php echo $cloth['id']; ?>" data-type="roupa">
                                     <i class="fa fa-trash"></i> Excluir
                                 </a>
+                                <?php } ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>

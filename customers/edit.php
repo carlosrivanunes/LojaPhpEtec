@@ -3,7 +3,16 @@
     edit();
 ?>
 
+
 <?php include(HEADER_TEMPLATE); ?>
+
+
+<?php 
+    if (isset($_SESSION['user']) != 1) {
+        header("Location: " . BASEURL . "/index.php");
+    }
+?> 
+
 
 <h2>Atualizar Cliente</h2>
 <div class="container">
@@ -24,7 +33,7 @@
         <div class="form-group col-md-2">
             <label for="campo3">Data de Nascimento</label>
             <input type="date" class="form-control" name="customer['birthdate']"
-                value="<?php echo FormataData($customer['birthdate'], "d/m/Y"); ?>">
+                value="<?php echo FormataData2($customer['birthdate'], "Y-m-d"); ?>">
         </div>
     </div>
     <div class="row">
@@ -47,7 +56,7 @@
         <div class="form-group col-md-2">
             <label for="campo3">Data de Cadastro</label>
             <input type="date" class="form-control" name="customer['created']" disabled
-                value="<?php echo $customer['created']; ?>">
+                value="<?php echo FormataData2($customer['created'], "Y-m-d"); ?>">
         </div>
     </div>
     <div class="row">
@@ -91,3 +100,8 @@
 </form>
 </div>
 <?php include(FOOTER_TEMPLATE); ?>
+
+<?php /*
+    echo('USER ' . isset($_SESSION['user']) . '<br>'); 
+    echo('ADMIN ' . isset($_SESSION['admin'])); 
+*/ ?> 

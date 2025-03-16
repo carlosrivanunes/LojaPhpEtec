@@ -27,28 +27,28 @@
                 </tr>
             </thead>
             <tbody>
-                <?php if ($clothes): ?>
-                    <?php foreach ($clothes as $cloth): ?>
+                <?php if ($tablets): ?>
+                    <?php foreach ($tablets as $tablet): ?>
                         <tr>
-                            <td><?php echo $cloth['id']; ?></td>
-                            <td><?php echo $cloth['descricao']; ?></td>
-                            <td><?php echo $cloth['precou']; ?></td>
-                            <td><?php echo $cloth['img']; ?></td>
+                            <td><?php echo $tablet['id']; ?></td>
+                            <td><?php echo $tablet['descricao']; ?></td>
+                            <td><?php echo $tablet['precou']; ?></td>
+                            <td><?php echo $tablet['img']; ?></td>
                             <?php
                                 $data = new DateTime(
-                                    $cloth['modified'],
+                                    $tablet['modified'],
                                     new DateTimeZone("America/Sao_Paulo")
                                 )
                             ?>
                             <td><?php echo $data -> format("d/m/Y - H:i:s") ?></td>
                             <td class="actions text-right">
-                                <a href="view.php?id=<?php echo $cloth['id']; ?>" class="btn btn-sm btn-success"><i
+                                <a href="view.php?id=<?php echo $tablet['id']; ?>" class="btn btn-sm btn-success"><i
                                         class="fa fa-eye"></i> Visualizar</a>
                                 <?php if (isset($_SESSION['user'])) { ?> 
-                                <a href="edit.php?id=<?php echo $cloth['id']; ?>" class="btn btn-sm btn-warning"><i
+                                <a href="edit.php?id=<?php echo $tablet['id']; ?>" class="btn btn-sm btn-warning"><i
                                         class="fa fa-pencil"></i> Editar</a>
                                 <a href="#" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#delete-modal"
-                                    data-cloth="<?php echo $cloth['id']; ?>" data-type="roupa">
+                                    data-tablet="<?php echo $tablet['id']; ?>" data-type="tablet">
                                     <i class="fa fa-trash"></i> Excluir
                                 </a>
                                 <?php } ?>

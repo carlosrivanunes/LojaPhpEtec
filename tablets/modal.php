@@ -33,8 +33,8 @@
 
         deleteModal.addEventListener('show.bs.modal', function(event) {
             var button = event.relatedTarget;
-            var itemId = button.getAttribute('data-cloth'); // ID do item
-            var itemType = button.getAttribute('data-type'); // Tipo de item: cliente, usuário, roupa
+            var itemId = button.getAttribute('data-tablet'); // ID do item
+            var itemType = button.getAttribute('data-type'); // Tipo de item: cliente, usuário, tablet
 
             // Define o texto do corpo do modal dinamicamente com base no tipo de item
             modalBodyText.textContent = `Deseja mesmo excluir este ${itemType.toLowerCase()} (${itemId})?`;

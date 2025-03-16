@@ -21,7 +21,8 @@
                     </div>
                 </a>
             </div>
-            <?php } ?>    
+            <?php } ?>   
+            <?php if (isset($_SESSION['user'])) { ?> 
             <!-- Clientes -->
             <div class="col">
                 <a href="customers" class="card text-center shadow-sm border-success">
@@ -31,11 +32,12 @@
                     </div>
                 </a>
             </div>
+            <?php } ?> 
 
             <?php if (isset($_SESSION['user'])) { ?>    
             <!-- Nova Roupa-->
             <div class="col">
-                <a href="clothes/add.php" class="card text-center shadow-sm border-warning">
+                <a href="tablets/add.php" class="card text-center shadow-sm border-warning">
                     <div class="card-body">
                     <i class="fa-solid fa-cart-plus fa-3x mb-3 text-warning"></i>
                         <h5 class="card-title">Novos Tablets</h5>
@@ -45,7 +47,7 @@
             <?php } ?>  
             <!-- Roupa -->
             <div class="col">
-                <a href="clothes" class="card text-center shadow-sm border-danger">
+                <a href="tablets" class="card text-center shadow-sm border-danger">
                     <div class="card-body">
                     <i class="fa-solid fa-box fa-3x mb-3 text-danger"></i>
                         <h5 class="card-title">Produtos</h5>

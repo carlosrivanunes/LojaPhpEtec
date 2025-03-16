@@ -5,7 +5,7 @@ view($_GET['id']);
 
 <?php include(HEADER_TEMPLATE); ?>
 
-<h2 class="ms-3 mt-2">Produto <?php echo $cloth['id']; ?></h2>
+<h2 class="ms-3 mt-2">Produto <?php echo $tablet['id']; ?></h2>
 <hr>
 
 <?php if (!empty($_SESSION['message'])): ?>
@@ -16,48 +16,48 @@ view($_GET['id']);
     <div class="row">
         <div class="form-group col-md-7">
             <label for="descricao">Descrição</label>
-            <input type="text" class="form-control" id="descricao" value="<?php echo $cloth['descricao']; ?>" readonly>
+            <input type="text" class="form-control" id="descricao" value="<?php echo $tablet['descricao']; ?>" readonly>
         </div>
 
         <div class="form-group col-md-3">
             <label for="preco">Preço</label>
-            <input type="text" class="form-control" id="preco" value="<?php echo number_format($cloth['precou'], 2, ',', '.'); ?>" readonly>
+            <input type="text" class="form-control" id="preco" value="<?php echo number_format($tablet['precou'], 2, ',', '.'); ?>" readonly>
         </div>
 
         <div class="form-group col-md-2">
             <label for="tamanho">Em Estoque/Lojas</label>
-            <input type="text" class="form-control" id="tamanho" value="<?php echo $cloth['tamanho']; ?>" readonly>
+            <input type="text" class="form-control" id="tamanho" value="<?php echo $tablet['tamanho']; ?>" readonly>
         </div>
     </div>
 
     <div class="row">
         <div class="form-group col-md-5">
             <label for="quantidade">Em Estoque/Armazém</label>
-            <input type="text" class="form-control" id="quantidade" value="<?php echo $cloth['quantidade']; ?>" readonly>
+            <input type="text" class="form-control" id="quantidade" value="<?php echo $tablet['quantidade']; ?>" readonly>
         </div>
 
         <div class="form-group col-md-3">
             <label for="imagem">Imagem</label>
-            <input type="text" class="form-control" id="imagem" value="<?php echo !empty($cloth['img']) ? $cloth['img'] : 'Sem imagem disponível'; ?>" readonly>
+            <input type="text" class="form-control" id="imagem" value="<?php echo !empty($tablet['img']) ? $tablet['img'] : 'Sem imagem disponível'; ?>" readonly>
         </div>
 
         <div class="form-group col-md-2">
             <label for="created">Data de Cadastro</label>
-            <input type="text" class="form-control" id="created" value="<?php echo FormataData($cloth['created'], "d/m/Y"); ?>" readonly>
+            <input type="text" class="form-control" id="created" value="<?php echo FormataData($tablet['created'], "d/m/Y"); ?>" readonly>
         </div>
     </div>
 
     <div class="row mb-3">
         <div class="form-group col-md-12">
             <label>Pré-visualização da Imagem</label><br>
-            <img id="imagePreview" src="images/<?php echo !empty($cloth['img']) ? $cloth['img'] : 'path/to/default-image.jpg'; ?>" alt="Imagem da Roupa" class="img-fluid border rounded">
+            <img id="imagePreview" src="images/<?php echo !empty($tablet['img']) ? $tablet['img'] : 'path/to/default-image.jpg'; ?>" alt="Imagem do Tablet" class="img-fluid border rounded">
         </div>
     </div>
 
     <div id="actions" class="row mt-2">
         <div class="col-md-12">
             <?php if (isset($_SESSION['user'])) { ?>
-            <a href="edit.php?id=<?php echo $cloth['id']; ?>" class="btn btn-primary">Editar</a>
+            <a href="edit.php?id=<?php echo $tablet['id']; ?>" class="btn btn-primary">Editar</a>
             <?php } ?>
             <a href="index.php" class="btn btn-danger">Voltar</a>
         </div>

@@ -68,9 +68,9 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <?php if (isset($_SESSION['user'])) { ?> 
-                        <li><a class="dropdown-item" href="<?php echo BASEURL; ?>clothes/add.php"><i class="fa-solid fa-box"></i> Adicionar Produto</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASEURL; ?>tablets/add.php"><i class="fa-solid fa-box"></i> Adicionar Produto</a></li>
                         <?php } ?> 
-                        <li><a class="dropdown-item" href="<?php echo BASEURL; ?>clothes/"><i class="fa-solid fa-boxes-stacked"></i> Gerenciar Produtos</a></li>
+                        <li><a class="dropdown-item" href="<?php echo BASEURL; ?>tablets/"><i class="fa-solid fa-boxes-stacked"></i> Gerenciar Produtos</a></li>
                     </ul>
                 </li>
                 <?php if (isset($_SESSION['user'])): // Verifica se está logado ?>

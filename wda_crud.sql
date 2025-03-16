@@ -49,7 +49,8 @@ INSERT INTO `customers` (`name`, `cpf_cnpj`, `birthdate`, `address`, `hood`, `zi
 ('Fulano de Tal', '123.456.789-00', '1989-01-01 00:00:00', 'Rua da Web, 123', 'Internet', '12345678', 'Pilar do Sul', 'SP', '41 42241167', '15998474599', '143623456', '2016-05-24 00:00:00', '2016-05-24 00:00:00'),
 ('Ciclano de Tal', '123.456.789-00', '1989-01-01 00:00:00', 'Rua da Web, 124', 'Internet', '12345678', 'Pilar do Sul', 'SP', '41 42241169', '15798474599', '143823456', '2016-05-24 00:00:00', '2016-05-24 00:00:00');
 
-CREATE TABLE IF NOT EXISTS `clothes` (
+
+CREATE TABLE IF NOT EXISTS `tablets` (
     `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `descricao` varchar(50) NOT NULL,
     `quantidade` int NOT NULL,
@@ -60,10 +61,10 @@ CREATE TABLE IF NOT EXISTS `clothes` (
     `modified` datetime NOT NULL
 );
 
-INSERT INTO `clothes` (`id`, `descricao`, `quantidade`, `precou`, `tamanho`, `img`, `created`, `modified`) VALUES
-(1,'Camisa da banda norueguesa Burzum', 10, 78.99, 20, 'camisa01.jpeg', '2016-05-24 00:00:00', '2016-05-24 00:00:00'),
-(2,'Camisa da banda norueguesa Mayhem', 6, 102.90, 20, 'camisa02.jpeg', '2016-05-24 00:00:00', '2016-05-24 00:00:00'),
-(3,'Camisa da banda sueca Bathory', 3, 135.50, 20, 'camisa03.jpeg', '2016-05-24 00:00:00', '2016-05-24 00:00:00');
+INSERT INTO `tablets` (`id`, `descricao`, `quantidade`, `precou`, `tamanho`, `img`, `created`, `modified`) VALUES
+(1,'Tablet Samsung Galaxy Tab S7', 10, 2999.99, 11, 'tablet01.jpeg', '2024-05-24 00:00:00', '2024-05-24 00:00:00'),
+(2,'Tablet Apple iPad Pro', 6, 7999.90, 12, 'tablet02.jpeg', '2024-05-24 00:00:00', '2024-05-24 00:00:00'),
+(3,'Tablet Microsoft Surface Pro', 3, 9999.50, 13, 'tablet03.jpeg', '2024-05-24 00:00:00', '2024-05-24 00:00:00');
 
 CREATE TABLE usuarios(
     id int AUTO_INCREMENT not null PRIMARY KEY,

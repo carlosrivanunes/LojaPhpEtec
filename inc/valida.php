@@ -23,6 +23,7 @@ try {
     // Preparar dados
     $usuario = $_POST['login'];
     $senha = criptografia($_POST['senha']);
+    //$senha = ($_POST['senha']);
     // Usar prepared statements para evitar SQL Injection
     $stmt = $bd->prepare("SELECT id, nome, user, pass FROM usuarios WHERE user = ? AND pass = ? LIMIT 1");
     $stmt->bind_param('ss', $usuario, $senha);

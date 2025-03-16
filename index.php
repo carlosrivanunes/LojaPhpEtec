@@ -33,7 +33,7 @@
             </div>
 
             <?php if (isset($_SESSION['user'])) { ?>    
-            <!-- Nova Roupa -->
+            <!-- Nova Roupa-->
             <div class="col">
                 <a href="clothes/add.php" class="card text-center shadow-sm border-warning">
                     <div class="card-body">

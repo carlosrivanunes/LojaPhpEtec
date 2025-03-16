@@ -38,12 +38,12 @@
                 <a href="clothes/add.php" class="card text-center shadow-sm border-warning">
                     <div class="card-body">
                     <i class="fa-solid fa-cart-plus fa-3x mb-3 text-warning"></i>
-                        <h5 class="card-title">Novos Produtos</h5>
+                        <h5 class="card-title">Novos Tablets</h5>
                     </div>
                 </a>
             </div>
             <?php } ?>  
-            <!-- Roupas -->
+            <!-- Roupa -->
             <div class="col">
                 <a href="clothes" class="card text-center shadow-sm border-danger">
                     <div class="card-body">

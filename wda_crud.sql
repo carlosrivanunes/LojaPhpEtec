@@ -77,6 +77,7 @@ CREATE TABLE usuarios(
 INSERT INTO `usuarios`(`nome`, `user`, `pass`) 
 VALUES ('Zé Lele','zelele','5243897562837456982'),
 ('Mary Zica','mazi','786098767869'),
-('Fugiru Nakombi','fugina','623485634753234');
+('Fugiru Nakombi','fugina','623485634753234'),
+('admin','admin','$2a$08$CflfllePArK1BJomM0F6a.23zG.dmBjCzK/I6Y57bmfptSEKPvst6');
 
 COMMIT;
